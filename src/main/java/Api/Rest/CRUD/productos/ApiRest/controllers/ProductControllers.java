@@ -5,6 +5,7 @@ import Api.Rest.CRUD.productos.ApiRest.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.ui.Model;
 
 import java.util.List;
 
@@ -16,7 +17,7 @@ public class ProductControllers {
 
     @GetMapping
     public List<Product> listarProducto(){
-        return productService.fileAll()
+        return productService.fileAll();
     }
 
     @GetMapping(value = "/{id}")
