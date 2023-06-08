@@ -12,6 +12,7 @@ public class ProductServiceImpl implements ProductService{
     @Autowired
     private ProductDao productDao;
 
+
     @Override
     public List<Product> fileAll() {
         return (List<Product>)productDao.findAll();
@@ -28,7 +29,12 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public void createProducto(Long id, Product product) {
+    public void createProducto(Product product) {
+      productDao.save(product);
+    }
+
+    @Override
+    public void modifyProducto(Long id, Product product) {
         if(productDao.existsById(id)){
             product.setId(id);
             productDao.save(product);
