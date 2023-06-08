@@ -9,7 +9,7 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nombre;
+    private String name;
     private String marca;
     private String descripcion;
     private Double price;
@@ -22,12 +22,12 @@ public class Product {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getMarca() {
@@ -53,17 +53,17 @@ public class Product {
     public void setPrice(Double price) {
         this.price = price;
     }
-
-    @Column(name = "crear_articulo")
+  /*
+    @Column(name = "crea_articulo")
     @Temporal(TemporalType.DATE)
 
     private Date creararticulo;
 
-    public Date getCreararticulo(){
+  public Date getCreararticulo(){
         return creararticulo;
     }
 
     public void setCreararticulo(Date creararticulo){
         this.creararticulo = creararticulo;
-    }
+    }*/
 }

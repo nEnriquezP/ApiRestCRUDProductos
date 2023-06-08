@@ -40,8 +40,8 @@ public class ProductControllers {
         productService.deleteProducto(id);
     }
 
-    @GetMapping(value = "/{nombre}")
-    public List<Product> buscarNombre(@RequestParam String nombre){
-        return productService.findByName(nombre);
+    @GetMapping(value = "/{name}")
+    public List<Product> buscarNombre(@RequestParam String name){
+        return productService.findByName(name);
     }
 }
