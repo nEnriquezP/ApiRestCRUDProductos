@@ -21,7 +21,7 @@ public class ProductControllers {
 
     @GetMapping(value = "/{id}")
     public Product obtenerProducto(@RequestParam Long id){
-        return productService.findById();
+        return productService.findById(id);
     }
 
     @PostMapping()
@@ -43,6 +43,4 @@ public class ProductControllers {
     public List<Product> buscarNombre(@RequestParam String nombre){
         return productService.findByName(nombre);
     }
-
-
 }
